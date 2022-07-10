@@ -1754,6 +1754,15 @@
       <field type="float" name="distance" units="m">Distance (uncorrected)</field>
       <field type="float" name="temperature" units="degC">Water temperature</field>
     </message>
+    <message id="8532" name="HPPOSLLH_GPS_RAW_INT">
+      <description>High-precision (to 9 digits) global position (LLH), as returned by the Global Positioning System (GPS). This is
+                NOT the global position estimate of the system, but rather a RAW sensor value. See message GLOBAL_POSITION for the global position estimate.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="double" name="lat" units="deg">High-precision Latitude, expressed</field>
+      <field type="double" name="lon" units="deg">High-precision Longitude, expressed</field>
+      <field type="float" name="hgt" units="m">Height above ground</field>
+      <field type="float" name="hdg" units="deg">Vehicle heading (yaw angle), 0.0..359.99 degrees. If unknown, set to: 720.0</field>
+    </message>
     <message id="11039" name="MCU_STATUS">
       <description>The MCU status, giving MCU temperature and voltage. The min and max voltages are to allow for detecting power supply instability.</description>
       <field type="uint8_t" name="id" instance="true">MCU instance</field>
