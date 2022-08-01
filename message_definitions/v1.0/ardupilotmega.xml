@@ -1763,6 +1763,15 @@
       <field type="float" name="hgt" units="m">Height above ground</field>
       <field type="float" name="hdg" units="deg">Vehicle heading (yaw angle), 0.0..359.99 degrees. If unknown, set to: 720.0</field>
     </message>
+    <message id="8533" name="HPPOSLLH_GLOBAL_POSITION_INT">
+      <description>High-precision (to 9 digits) filtered global position (e.g. fused GPS and accelerometers). The position is in GPS-frame (right-handed, Z-up). It
+               is designed as scaled integer message since the resolution of float is not sufficient.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="double" name="lat" units="deg">High-precision Latitude, expressed</field>
+      <field type="double" name="lon" units="deg">High-precision Longitude, expressed</field>
+      <field type="float" name="hgt" units="m">Height above ground</field>
+      <field type="float" name="hdg" units="deg">Vehicle heading (yaw angle), 0.0..359.99 degrees. If unknown, set to: 720.0</field>
+    </message>
     <message id="11039" name="MCU_STATUS">
       <description>The MCU status, giving MCU temperature and voltage. The min and max voltages are to allow for detecting power supply instability.</description>
       <field type="uint8_t" name="id" instance="true">MCU instance</field>
